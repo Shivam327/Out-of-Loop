@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "paths": {
+      "@entities/*": ["src/entities/*"],
+      "@users/*": ["src/users/*"],
+      "@promises/*": ["src/promises/*"],
+      "@reflections/*": ["src/reflections/*"],
+      "@attention/*": ["src/attention/*"],
+      "@insights/*": ["src/insights/*"],
+      "@common/*": ["src/common/*"]
+    }
+  }
+}

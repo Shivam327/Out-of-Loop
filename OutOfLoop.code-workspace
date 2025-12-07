@@ -1,0 +1,17 @@
+{
+    "folders": [
+      { "path": "." },
+      { "path": "apps/mobile" },
+      { "path": "apps/api" },
+      { "path": "packages/shared" }
+    ],
+    "settings": {
+      "typescript.tsdk": "node_modules/typescript/lib",
+      "eslint.workingDirectories": [
+        "apps/mobile",
+        "apps/api",
+        "packages/shared"
+      ]
+    }
+  }
+  
