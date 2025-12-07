@@ -1,9 +1,21 @@
-const API_BASE_URL = "http://localhost:3000"; // change to LAN IP on device
+import { apiClient } from "./http/apiClient";
 
-export async function apiGet<T>(path: string): Promise<T> {
-  const res = await fetch(`${API_BASE_URL}${path}`);
-  if (!res.ok) {
-    throw new Error(`GET ${path} failed: ${res.status}`);
-  }
-  return res.json();
+export async function apiGet<T>(url: string): Promise<T> {
+  const res = await apiClient.get<T>(url);
+  return res.data;
+}
+
+export async function apiPost<T>(url: string, body?: any): Promise<T> {
+  const res = await apiClient.post<T>(url, body);
+  return res.data;
+}
+
+export async function apiPatch<T>(url: string, body?: any): Promise<T> {
+  const res = await apiClient.patch<T>(url, body);
+  return res.data;
+}
+
+export async function apiDelete<T>(url: string): Promise<T> {
+  const res = await apiClient.delete<T>(url);
+  return res.data;
 }
